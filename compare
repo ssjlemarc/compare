@@ -1,0 +1,16 @@
+def compare(A, B):
+  """
+  -> Verifica se os elementos de uma lista B está contido numa lista A
+  :param A: lista principal a ser verificada;
+  :param B: lista com os elementos a serem verificados na lista A;
+  :return: lista C de mesmo tamanho da lista A que sinaliza com '1' na posição
+  em que foi encontrado um elemento da lista B e '0' quando não foi encontrado.  
+  """
+  C = []
+  for cont in range(0, len(A)):
+    C.append(0)
+  for i, v in enumerate(B):
+   for n, val in enumerate(A):
+     if A[n] == B[i]:
+       C[n] += 1
+  return C
